@@ -1,0 +1,21 @@
+{
+  "name": "feenix",
+  "version": "1.0.0",
+  "description": "The project automated with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome --spec cypress/e2e/*.js",
+    "test:chrome": "cypress run --browser chrome",
+    "start": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.8.0",
+    "neat-csv": "^5.2.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
