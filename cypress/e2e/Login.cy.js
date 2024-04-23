@@ -12,7 +12,7 @@ describe('Visit the app', () => {
     .then(response => regData=response)
 })
 
-  it('Open the URL', () => {
+  it('login to app', () => {
     cy.visit('/');
     products.enterEmail(regData[0].UserEmail);
     products.enterPassword(regData[0].Password);
