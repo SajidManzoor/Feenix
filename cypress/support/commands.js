@@ -10,7 +10,22 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+import loginObjects from "../e2e/Objects/login";
+import utilities from "./utils";
+
+const login = new loginObjects();
+const utils = new utilities();
+
+Cypress.Commands.add("login", (email, password) => {
+  utils.navigateToUrl();
+  utils.verifyVisibility(login.Auth.emailField());
+  utils.enterText(login.Auth.emailField(), email);
+  utils.verifyVisibility(login.Auth.passwordField());
+  utils.enterText(login.Auth.passwordField(), password);
+  utils.verifyVisibility(login.Auth.signInButton());
+  utils.click(login.Auth.signInButton());
+  utils.verifyVisibility(login.Auth.orgName());
+});
 //
 //
 // -- This is a child command --

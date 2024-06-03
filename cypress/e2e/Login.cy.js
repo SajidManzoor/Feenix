@@ -1,21 +1,14 @@
-import productsMethods from "./Methods/productsMethods"
-const csv = require('neat-csv')
-
-const products = new productsMethods();
+import neatCsv from "neat-csv";
 
 let regData;
-describe('Visit the app', () => {
-
+describe("Authorization", () => {
   before(() => {
-    cy.fixture('DataFile.csv')
-    .then(csv)
-    .then(response => regData=response)
-})
+    cy.fixture("DataFile.csv")
+      .then(neatCsv)
+      .then((response) => (regData = response));
+  });
 
-  it('User able to logged in successfully', () => {
-    cy.visit('/');
-    products.enterEmail(regData[0].UserEmail);
-    products.enterPassword(regData[0].Password);
-    products.clickLogin();
-  })
-})
+  it("TC1 - Verify user is able to login with valid email and valid password", () => {
+    cy.login(regData[0].UserEmail, regData[0].Password);
+  });
+});
