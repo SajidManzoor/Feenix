@@ -4,7 +4,7 @@
 	"description": "The project automated with Cypress",
 	"main": "index.js",
 	"scripts": {
-		"test": "npx cypress run --browser chrome --spec cypress/e2e/*.js"
+		"test": "npx cypress run"
 	},
 	"author": "",
 	"license": "ISC",
