@@ -155,14 +155,12 @@ export default class ProductsMethods {
     );
     if (!update) {
       utils.click(product.pricing.addDimensionBtn());
-      utils.verifyVisibility(product.pricing.dimension1DisplayName());
       utils.enterText(product.pricing.dimension1DisplayName(), d1DisplayName);
       utils.verifyVisibility(product.pricing.dimension1ApiName());
       utils.enterText(product.pricing.dimension1ApiName(), d1ApiName);
       utils.verifyVisibility(product.pricing.dimension1Description());
       utils.enterText(product.pricing.dimension1Description(), d1Description);
     } else {
-      utils.verifyVisibility(product.pricing.dimension1DisplayName());
       utils.enterText(product.pricing.dimension1DisplayName(), d1DisplayName);
       utils.enterText(product.pricing.dimension1ApiName(), d1ApiName);
       utils.verifyVisibility(product.pricing.dimension1Description());

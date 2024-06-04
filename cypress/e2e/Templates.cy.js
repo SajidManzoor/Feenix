@@ -37,6 +37,7 @@ describe("SaaS Subscription (Template)", () => {
       saasRegistrationPageOption: regData[0].SaaSRegistrationPageOption,
       templateName: regData[0].TemplateName,
       pricingCategory: regData[0].PricingCategory,
+      d1DisplayName: regData[0].D1DisplayName,
       d1ApiName: regData[0].D1ApiName,
       d1Description: regData[0].D1Description,
     };
@@ -66,6 +67,7 @@ describe("SaaS Subscription (Template)", () => {
       saasRegistrationPageOption: regData[1].SaaSRegistrationPageOption,
       templateName: regData[0].TemplateName,
       pricingCategory: regData[1].PricingCategory,
+      d1DisplayName: regData[0].D1DisplayName,
       d1ApiName: regData[1].D1ApiName,
       d1Description: regData[1].D1Description,
       update: true,
@@ -104,6 +106,7 @@ describe("SaaS Subscription (Template)", () => {
       saasRegistrationPageOption: regData[2].SaaSRegistrationPageOption,
       templateName: regData[0].TemplateName,
       pricingCategory: regData[2].PricingCategory,
+      d1DisplayName: regData[0].D1DisplayName,
       d1ApiName: regData[2].D1ApiName,
       d1Description: regData[2].D1Description,
       update: true,
