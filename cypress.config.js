@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 const { allureCypress } = require("allure-cypress/reporter");
 
 module.exports = defineConfig({
-  projectId: "7fypov",
+  projectId: "8199cm",
   defaultCommandTimeout:40000,
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
