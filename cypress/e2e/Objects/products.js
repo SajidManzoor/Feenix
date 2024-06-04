@@ -11,8 +11,7 @@ export default class ProductObjects {
   listBox = () => cy.get("[role=listbox]");
   addBtn = () => cy.get(".css-5ax1kt > .MuiButtonBase-root");
   productList = () => cy.get(".MuiMenu-list li");
-  firstProductTitle = () =>
-    cy.get("[data-field='ProductTitle']").eq(1);
+  firstProductTitle = () => cy.get("[data-field='ProductTitle']").eq(1);
   Sidebar = {
     productsTab: () => cy.get(".MuiList-root a"),
   };
@@ -109,6 +108,8 @@ export default class ProductObjects {
       cy.get("#mui-component-select-usage_unit_category"),
     categoriesDropdown: () => cy.get(".MuiPaper-elevation8 ul li"),
     addDimensionBtn: () => cy.get(".css-6r2fzw > .MuiButtonBase-root"),
+    dimension1DisplayName: () =>
+      cy.get('[name="subscription_dimensions.0.name"]'),
     dimension1ApiName: () =>
       cy.get('[name="subscription_dimensions.0.api_name"]'),
     dimension1Description: () =>
@@ -116,6 +117,8 @@ export default class ProductObjects {
     accountID: () => cy.get("[name='allowed_account_ids']"),
     reviewPricingCategory: () =>
       cy.get("#mui-component-select-usage_unit_category.Mui-disabled"),
+    reviewDimension1DisplayName: () =>
+      cy.get('.Mui-disabled[name="subscription_dimensions.0.name"]'),
     reviewDimension1ApiName: () =>
       cy.get('.Mui-disabled[name="subscription_dimensions.0.api_name"]'),
     reviewDimension1Description: () =>

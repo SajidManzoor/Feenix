@@ -19,11 +19,9 @@ const utils = new utilities();
 Cypress.Commands.add("login", (email, password) => {
   utils.navigateToUrl();
   utils.verifyVisibility(login.Auth.emailField());
-  utils.enterText(login.Auth.emailField(), email);
+  utils.enterText(login.Auth.emailField(), email+'{enter}');
   utils.verifyVisibility(login.Auth.passwordField());
-  utils.enterText(login.Auth.passwordField(), password);
-  utils.verifyVisibility(login.Auth.signInButton());
-  utils.click(login.Auth.signInButton());
+  utils.enterText(login.Auth.passwordField(), password+'{enter}');
   utils.verifyVisibility(login.Auth.orgName());
 });
 //
