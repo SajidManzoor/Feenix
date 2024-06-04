@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 04 13:42:31 GMT 2024","Tue Jun 04 13:42:36 GMT 2024","4992","Authorization","","","","","TC1 - Verify user is able to login with valid email and valid password",""
