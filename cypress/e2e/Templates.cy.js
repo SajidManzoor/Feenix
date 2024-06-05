@@ -45,7 +45,7 @@ describe("SaaS Subscription (Template)", () => {
     products.fillPricingFields(data);
     templates.saveTemplate(data.templateName)
     products.verifyToastMessage(regData[1].ToastMessage);
-    data.templateName=regData[1].TemplateName
+    data.templateName = regData[1].TemplateName
     products.navigateToProductPage(regData[0].ProductName);
     products.fillGeneralFields(data);
     products.fillPricingFields(data);

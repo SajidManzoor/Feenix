@@ -9,6 +9,6 @@ describe("Authorization", () => {
   });
 
   it("TC1 - Verify user is able to login with valid email and valid password", () => {
-    cy.login(regData[0].UserEmail, regData[0].Password);
+    cy.login(regData[0].UserEmail, regData[0].Title);
   });
 });

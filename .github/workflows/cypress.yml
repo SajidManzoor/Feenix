@@ -4,48 +4,42 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    # Runs tests in parallel with matrix strategy https://docs.cypress.io/guides/guides/parallelization
-    # https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
-    # Also see warning here https://github.com/cypress-io/github-action#parallel
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
       - name: Cypress run
-        # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@master
         with:
-          # Starts web server for E2E tests - replace with your own server invocation
-          # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
           command: npm run test
           parallel: true # Runs test in parallel using settings above
+          record: true
+          browser: chrome
         env:
-          # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
-          # in GitHub repo → Settings → Secrets → Actions
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get Allure history
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         if: always()
         continue-on-error: true
         with:
-            ref: allure
-            path: allure
+          ref: gh-pages
+          path: gh-pages
 
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-            allure_results: allure-results
-            gh_pages: allure
+          allure_results: allure-results
+          gh_pages: allure
+          allure_report: allure-report
+          allure_history: allure-history
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_branch: allure
-            publish_dir: allure-history
-        
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
