@@ -4,7 +4,7 @@
 	"description": "The project automated with Cypress",
 	"main": "index.js",
 	"scripts": {
-		"test": "npx cypress run"
+		"test": "npx cypress run --record --key d913b4cf-a767-4206-8025-5c23287c97e2"
 	},
 	"author": "",
 	"license": "ISC",
