@@ -5,6 +5,7 @@ module.exports = defineConfig({
   projectId: "8199cm",
   defaultCommandTimeout:40000,
   reporter: 'cypress-mochawesome-reporter',
+  screenshotOnRunFailure: true,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
