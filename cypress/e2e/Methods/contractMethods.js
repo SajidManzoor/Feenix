@@ -7,6 +7,9 @@ const contractObjects = new ContractObjects();
 const product = new ProductsObjects();
 
 export default class ContractMethods {
+  /**
+  *  Fill all pricing fields
+  */
   fillPricingFields({
     contractMonthly = false,
     contract1Year = false,

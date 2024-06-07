@@ -5,6 +5,11 @@ const utils = new Utilities();
 const login = new LoginObjects();
 
 export default class LoginMethods {
+  /**
+   * Login using email and password
+   * @param {String} email 
+   * @param {String} password 
+   */
   login(email, password) {
     utils.verifyVisibility(login.Auth.emailField());
     utils.enterText(login.Auth.emailField(), email);
