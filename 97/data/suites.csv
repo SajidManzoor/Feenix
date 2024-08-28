@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Aug 28 01:23:24 GMT 2024","Wed Aug 28 01:24:08 GMT 2024","43743","Authorization","","","","","TC1 - Verify user is able to login with valid email and valid password",""
+"failed","Wed Aug 28 01:24:13 GMT 2024","Wed Aug 28 01:24:56 GMT 2024","42332","Create SaaS Contract","","","","","TC9 - Verify user can create a SAAS contract request with usage by selecting all contract duration options with ""Buyer can choose multiple options"" option as contract type along with Standard EULA option",""
+"failed","Wed Aug 28 01:25:48 GMT 2024","Wed Aug 28 01:26:30 GMT 2024","42297","SaaS Subscription (Template)","","","","","TC5 - Verify user is able to save the feenix SaaS subscription forms as a template with new seller account",""
+"failed","Wed Aug 28 01:25:01 GMT 2024","Wed Aug 28 01:25:43 GMT 2024","42307","Create SaaS Subscription","","","","","TC2 - Verify user is unable to submit the SaaS subscription form with blank mandatory fields",""
