@@ -1,5 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","42640","TC5 - Verify user is able to save the feenix SaaS subscription forms as a template with new seller account","SaaS Subscription (Template)","Tue Nov 12 01:29:27 GMT 2024","failed","Tue Nov 12 01:30:09 GMT 2024","","","",""
-"","43370","TC1 - Verify user is able to login with valid email and valid password","Authorization","Tue Nov 12 01:27:03 GMT 2024","failed","Tue Nov 12 01:27:47 GMT 2024","","","",""
-"","42646","TC2 - Verify user is unable to submit the SaaS subscription form with blank mandatory fields","Create SaaS Subscription","Tue Nov 12 01:28:39 GMT 2024","failed","Tue Nov 12 01:29:22 GMT 2024","","","",""
-"","42623","TC9 - Verify user can create a SAAS contract request with usage by selecting all contract duration options with ""Buyer can choose multiple options"" option as contract type along with Standard EULA option","Create SaaS Contract","Tue Nov 12 01:27:52 GMT 2024","failed","Tue Nov 12 01:28:34 GMT 2024","","","",""
